@@ -1,14 +1,14 @@
-package com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.person.employees;
+package com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.person.employe;
 
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.person.Person;
 
-public class Employees extends Person {
+public class Employe extends Person {
 
 
 
     public final String socialSecurityNumber;
 
-    public Employees(String dni, String name, String surname, String socialSecurityNumber) {
+    public Employe(String dni, String name, String surname, String socialSecurityNumber) {
         super(dni, name, surname);
         this.socialSecurityNumber = socialSecurityNumber;
     }
