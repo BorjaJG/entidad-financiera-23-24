@@ -1,6 +1,6 @@
 package com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.transactions;
 
-import java.util.ArrayList;
+
 
 public class GetTransactionUseCase {
 

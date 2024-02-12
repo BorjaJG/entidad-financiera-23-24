@@ -6,8 +6,26 @@ import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.transaction
 import java.util.ArrayList;
 
 public class TrasactionDataRepository  implements TransactionRepository {
+
+    private static TransactionRepository instance = null;
+
+    private ArrayList<Transaction> localTransaction = new ArrayList<>();
+    public  TrasactionDataRepository() {
+        initData();
+    }
+
+
+
+
+
+
     @Override
     public Transaction obtainTransaction(String idTransaction) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Transaction> obtainTransactions() {
         return null;
     }
 
@@ -26,8 +44,8 @@ public class TrasactionDataRepository  implements TransactionRepository {
 
     }
 
-    @Override
-    public ArrayList<Transaction> obtainTransactions() {
-        return null;
+    private void initData() {
+        localTransaction.add(new Transaction(333,"qeqw"));
+
     }
 }
