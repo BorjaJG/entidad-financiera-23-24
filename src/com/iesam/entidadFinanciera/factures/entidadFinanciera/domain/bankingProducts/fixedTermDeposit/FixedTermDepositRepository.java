@@ -9,7 +9,7 @@ public interface FixedTermDepositRepository {
 
 
     ArrayList<FixedTermDeposit> obtainFixedTermDeposits();
-    Transaction obtainFixedTermDeposit(String codeProduct);
+    FixedTermDeposit obtainFixedTermDeposit(String codeProduct);
     void deleteFixedTermDeposit(String codeProduct);
     void saveFixedTermDeposit(FixedTermDeposit fixedTermDeposit);
     void  updateFixedTermDeposit(FixedTermDeposit fixedTermDeposit);

@@ -13,7 +13,7 @@ public class BankAccountDataRepository implements BankAccountRepository {
     }
 
     @Override
-    public Transaction obtainBankAccount(String codeBankAccount) {
+    public BankAccount obtainBankAccount(String codeBankAccount) {
         return null;
     }
 

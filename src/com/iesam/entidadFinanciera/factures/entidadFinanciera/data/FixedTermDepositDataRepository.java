@@ -13,7 +13,7 @@ public class FixedTermDepositDataRepository implements FixedTermDepositRepositor
     }
 
     @Override
-    public Transaction obtainFixedTermDeposit(String codeProduct) {
+    public FixedTermDeposit obtainFixedTermDeposit(String codeProduct) {
         return null;
     }
 

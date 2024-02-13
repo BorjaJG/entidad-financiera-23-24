@@ -9,7 +9,7 @@ public interface BankAccountRepository {
 
 
     ArrayList<BankAccount> obtainBankAccounts();
-    Transaction obtainBankAccount(String codeBankAccount);
+    BankAccount obtainBankAccount(String codeBankAccount);
     void deleteBankAccount(String codeBankAccount);
     void saveBankAccount(BankAccount bankAccount);
     void  updateBankAccount(BankAccount bankAccount);

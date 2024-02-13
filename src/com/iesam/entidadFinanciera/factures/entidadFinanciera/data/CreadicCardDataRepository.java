@@ -2,8 +2,6 @@ package com.iesam.entidadFinanciera.factures.entidadFinanciera.data;
 
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.bankingProducts.creditCard.CredicCard;
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.bankingProducts.creditCard.CredicCardRepository;
-import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.bankingProducts.fixedTermDeposit.FixedTermDeposit;
-import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.transactions.Transaction;
 
 import java.util.ArrayList;
 
@@ -14,7 +12,7 @@ public class CreadicCardDataRepository implements CredicCardRepository {
     }
 
     @Override
-    public Transaction obtainCredicCard(String codeProduct) {
+    public CredicCard obtainCredicCard(String codeProduct) {
         return null;
     }
 
@@ -24,12 +22,12 @@ public class CreadicCardDataRepository implements CredicCardRepository {
     }
 
     @Override
-    public void saveCredicCard(FixedTermDeposit fixedTermDeposit) {
+    public void saveCredicCard(CredicCard credicCard) {
 
     }
 
     @Override
-    public void updateCredicCard(FixedTermDeposit fixedTermDeposit) {
+    public void updateCredicCard(CredicCard credicCard) {
 
     }
 }

@@ -9,7 +9,7 @@ public class SaveMortgageUseCase {
 
     public void  execute(Mortgage mortgage){
 
-
+        this.mortgageRepository.saveMortgage(mortgage);
 
     }
 
