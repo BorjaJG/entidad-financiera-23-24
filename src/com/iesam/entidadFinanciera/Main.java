@@ -1,4 +1,7 @@
 package com.iesam.entidadFinanciera;
+   import com.iesam.entidadFinanciera.factures.entidadFinanciera.presentation.MainClient;
+   import com.iesam.entidadFinanciera.factures.entidadFinanciera.presentation.MainEmploye;
+
    import java.util.Scanner;
 
     public class Main {
@@ -45,13 +48,14 @@ package com.iesam.entidadFinanciera;
 
             switch (opcionCliente) {
                 case 1:
-                    // Implementar lógica para ver datos y cuentas del cliente
+                    MainClient.PrintClient();
                     break;
                 case 2:
-                    // Implementar lógica para ver productos bancarios
+                    MainClient.PrintClientOfProduct();
+
                     break;
                 case 3:
-                    // Implementar lógica para realizar transacciones
+                    MainClient.PrintClientOfTransaction();
                     break;
                 case 4:
                     System.out.println("Volviendo al menú principal");
@@ -74,19 +78,19 @@ package com.iesam.entidadFinanciera;
 
             switch (opcionPersonal) {
                 case 1:
-                    // Implementar lógica para ver cuentas del banco
+                    MainEmploye.PrintEmployOfBankAccount();
                     break;
                 case 2:
-                    // Implementar lógica para modificar cuentas
+                    MainEmploye.EditEmployOfBankAccount();
                     break;
                 case 3:
-                    // Implementar lógica para eliminar cuentas
+                   MainEmploye.DeleteEmployOfBankAccount();
                     break;
                 case 4:
-                    // Implementar lógica para crear cuenta
+                    MainEmploye.CreateEmployOfBankAccount();
                     break;
                 case 5:
-                    // Implementar lógica para consultar cuentas
+                    MainEmploye.PrintEmployOfBankingProducts();
                     break;
                 case 6:
                     System.out.println("Volviendo al menú principal");
@@ -97,4 +101,3 @@ package com.iesam.entidadFinanciera;
         }
     }
 
-}
