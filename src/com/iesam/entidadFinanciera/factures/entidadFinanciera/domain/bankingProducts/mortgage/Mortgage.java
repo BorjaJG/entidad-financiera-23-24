@@ -10,7 +10,6 @@ public class Mortgage extends BankingProduct {
     private  final  String  end;
     private  final  String   loanAmount;
 
-
     public Mortgage(String codeProduct, String name, String description, String start, String end, String loanAmount) {
         super(codeProduct, name, description);
         this.start = start;

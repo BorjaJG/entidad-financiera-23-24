@@ -17,31 +17,47 @@ public class TrasactionDataRepository  implements TransactionRepository {
 
     @Override
     public Transaction obtainTransaction(String idTransaction) {
+        for (Transaction transaction : localTransaction) {
+            if (transaction.getIdTransaction().equals(idTransaction)) {
+                return transaction;
+            }
+        }
         return null;
     }
 
     @Override
     public ArrayList<Transaction> obtainTransactions() {
-        return null;
+        return localTransaction;
     }
 
     @Override
     public void deleteTransaction(String idTransaction) {
-
+        for (int i = 0; i<localTransaction.size();i++){
+            if (localTransaction.get(i).getIdTransaction().equals(idTransaction)){
+                localTransaction.remove(i);
+            }
+        }
     }
 
     @Override
     public void saveTransaction(Transaction transaction) {
-
+        localTransaction.add(transaction);
     }
 
     @Override
     public void updateTransaction(Transaction transaction) {
+        deleteTransaction(transaction.getIdTransaction());
+        saveTransaction(transaction);
 
     }
 
     private void initData() {
-        localTransaction.add(new Transaction(333,"qeqw"));
+        localTransaction.add(new Transaction(50,"Transaction 1"));
+        localTransaction.add(new Transaction(-30,"Transaction 2"));
 
     }
+
+
+
+
 }

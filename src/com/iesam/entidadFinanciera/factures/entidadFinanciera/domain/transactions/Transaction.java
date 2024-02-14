@@ -2,7 +2,7 @@ package com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.transactio
 
 public class Transaction {
 
-    public  final  float movimiento;
+    public  final  double movimiento;
     public  final  String idTransaction;
 
 
@@ -11,7 +11,7 @@ public class Transaction {
         this.idTransaction = idTransaction;
     }
 
-    public float getMovimiento() {
+    public double getMovimiento() {
         return movimiento;
     }
 
