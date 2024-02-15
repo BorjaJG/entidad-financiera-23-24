@@ -2,6 +2,7 @@ package com.iesam.entidadFinanciera.factures.entidadFinanciera.data;
 
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.person.Person;
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.person.PersonRepository;
+import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.person.employe.EmployeRepository;
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.transactions.Transaction;
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.transactions.TransactionRepository;
 
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 
 public class PersonDataRepository implements PersonRepository {
 
-    private static TransactionRepository instance = null;
+    private static PersonDataRepository instance = null;
 
     private ArrayList<Person> localPerson = new ArrayList<>();
     public  PersonDataRepository() {
@@ -60,6 +61,11 @@ public class PersonDataRepository implements PersonRepository {
          localPerson.add( new Person("2","",""));
     }
 
-
+    public static PersonRepository newInstance(){
+        if (instance == null){
+            instance = new PersonDataRepository();
+        }
+        return instance;
+    }
 
 }

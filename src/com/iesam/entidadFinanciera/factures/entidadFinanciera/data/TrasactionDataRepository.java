@@ -57,7 +57,12 @@ public class TrasactionDataRepository  implements TransactionRepository {
 
     }
 
-
+    public static TransactionRepository newInstance(){
+        if (instance == null){
+            instance = new TrasactionDataRepository();
+        }
+        return instance;
+    }
 
 
 }

@@ -2,6 +2,7 @@ package com.iesam.entidadFinanciera.factures.entidadFinanciera.data;
 
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.bankingProducts.fixedTermDeposit.FixedTermDeposit;
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.bankingProducts.fixedTermDeposit.FixedTermDepositRepository;
+import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.person.employe.EmployeRepository;
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.transactions.Transaction;
 
 import java.util.ArrayList;
@@ -62,6 +63,11 @@ public class FixedTermDepositDataRepository implements FixedTermDepositRepositor
 
     }
 
-
+    public static FixedTermDepositRepository newInstance(){
+        if (instance == null){
+            instance = new FixedTermDepositDataRepository();
+        }
+        return instance;
+    }
 
 }

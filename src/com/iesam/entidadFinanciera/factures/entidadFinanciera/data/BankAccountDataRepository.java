@@ -60,7 +60,12 @@ public class BankAccountDataRepository implements BankAccountRepository {
 
 
     }
-
+    public static BankAccountRepository newInstance(){
+        if (instance == null){
+            instance = new BankAccountDataRepository();
+        }
+        return instance;
+    }
 
 
 

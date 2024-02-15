@@ -48,7 +48,9 @@ package com.iesam.entidadFinanciera;
 
             switch (opcionCliente) {
                 case 1:
-                    MainClient.PrintClient();
+                    System.out.println("Introduce dni: ");
+                    String i = scanner.nextLine();
+                    MainClient.PrintClient(i);
                     break;
                 case 2:
                     MainClient.PrintClientOfProduct();

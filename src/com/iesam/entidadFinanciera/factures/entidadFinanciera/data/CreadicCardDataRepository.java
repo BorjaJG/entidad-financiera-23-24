@@ -71,7 +71,12 @@ public class CreadicCardDataRepository implements CredicCardRepository {
         localCredicCard.add(new CredicCard("","","","",""));
     }
 
-
+    public static CredicCardRepository newInstance(){
+        if (instance == null){
+            instance = new CreadicCardDataRepository();
+        }
+        return instance;
+    }
 
 
 

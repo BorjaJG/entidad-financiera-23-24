@@ -5,6 +5,7 @@ import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.bankingProd
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.bankingProducts.mortgage.Mortgage;
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.bankingProducts.mortgage.MortgageRepository;
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.person.Person;
+import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.person.employe.EmployeRepository;
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.transactions.Transaction;
 import com.iesam.entidadFinanciera.factures.entidadFinanciera.domain.transactions.TransactionRepository;
 
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 
 public class MortgageDataRepository implements  MortgageRepository  {
 
-    private static MortgageRepository instance = null;
+    private static EmployeDataRepositoy instance = null;
 
     private ArrayList<Mortgage> localMartgage = new ArrayList<>();
     public  MortgageDataRepository() {
@@ -63,6 +64,11 @@ public class MortgageDataRepository implements  MortgageRepository  {
         localMartgage.add(new Mortgage("ewqe","qwe","qe","","",""));
         localMartgage.add(new Mortgage("","","","","",""));
     }
-
+    public static EmployeDataRepositoy newInstance(){
+        if (instance == null){
+            instance = new EmployeDataRepositoy();
+        }
+        return instance;
+    }
 
 }

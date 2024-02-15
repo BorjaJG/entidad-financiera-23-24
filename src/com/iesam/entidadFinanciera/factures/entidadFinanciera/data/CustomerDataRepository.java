@@ -57,11 +57,16 @@ public class CustomerDataRepository  implements CustomerRepository {
     }
 
     public void initDate(){
-        localCustomer.add(new Customer("","","","","",""));
-        localCustomer.add(new Customer("","","","","",""));
+        localCustomer.add(new Customer("1","","","","",""));
+        localCustomer.add(new Customer("2","","","","",""));
     }
 
-
+    public static CustomerRepository newInstance(){
+        if (instance == null){
+            instance = new CustomerDataRepository();
+        }
+        return instance;
+    }
 
 
 }
